@@ -1,0 +1,128 @@
+﻿WEBVTT
+Kind: captions
+Source: Articulate Closed Captions Editor
+Source Version: 3.95.33670.0
+
+00:00:00.200 --> 00:00:01.000
+Hey everyone!
+
+00:00:01.984 --> 00:00:06.736
+I've put together a detailed video on web UI automation using Playwright with JavaScript.
+
+00:00:07.328 --> 00:00:12.288
+I'll walk you through a framework I designed specifically for the Orange HRM demo website.
+
+00:00:12.848 --> 00:00:14.576
+I've created two test cases:
+
+00:00:14.704 --> 00:00:18.608
+one that passes successfully and one that's intentionally designed to fail.
+
+00:00:19.056 --> 00:00:22.352
+To make all of this happen, I've built out several functions:
+
+00:00:22.464 --> 00:00:27.120
+for logging in, logging out, creating a user, verifying user creation
+
+00:00:27.211 --> 00:00:30.962
+deleting a user, and even attempting to delete that super admin.
+
+00:00:32.193 --> 00:00:39.985
+I have created different methods within the functions and passed centralized locators so that I can use them across various methods and functions.
+
+00:00:40.913 --> 00:00:46.545
+The advantage of this approach is that I won’t have to modify locators repeatedly if they change in the future.
+
+00:00:47.513 --> 00:00:51.873
+Since the locators are centralized, I will only need to update them in one place,
+
+00:00:52.017 --> 00:00:56.216
+and those changes will automatically reflect everywhere the locators are used.
+
+00:00:57.192 --> 00:01:01.896
+I have used parameters in the methods and called arguments from a common data repository.
+
+00:01:02.144 --> 00:01:07.392
+The advantage of using a common data repository is that if data needs to be updated in the future
+
+00:01:07.592 --> 00:01:10.784
+especially when the same data is used in multiple places
+
+00:01:10.952 --> 00:01:14.792
+changing it in one central location will automatically reflect everywhere.
+
+00:01:14.992 --> 00:01:21.332
+Another benefit of having a data repository is that the same data can be used across different environments as needed.
+
+00:01:26.218 --> 00:01:32.546
+Running both test cases sequentially will allow you to observe their execution flow and validate the results effectively.
+
+00:01:32.698 --> 00:01:39.634
+Playwright's capability to run across multiple browsers simultaneously is definitely a major advantage for cross-browser testing.
+
+00:01:39.770 --> 00:01:42.992
+But keeping things simple with Chrome for now one step at a time!
+
+00:01:44.242 --> 00:01:47.826
+First test case is now running—let’s see how it executes
+
+00:02:04.202 --> 00:02:06.026
+Second test case is now running.
+
+00:02:06.995 --> 00:02:09.546
+Since this one is designed to fail intentionally, 
+
+00:02:09.700 --> 00:02:13.827
+it'll be interesting to see how the reporting captures the exact failure point.
+
+00:02:14.760 --> 00:02:19.568
+My first test case passed successfully, which means framework is functioning as expected.
+
+00:02:20.660 --> 00:02:23.748
+Let's generate the Allure report and analyze the results.
+
+00:02:34.209 --> 00:02:36.905
+We’ve successfully executed both test cases
+
+00:02:37.066 --> 00:02:39.450
+one passed while the other failed as expected.
+
+00:02:40.427 --> 00:02:43.275
+Let’s dive into the detailed view of your Allure report.
+
+00:02:45.102 --> 00:02:48.126
+Let's start by reviewing the steps of the passed test case.
+
+00:02:49.029 --> 00:02:53.901
+Here’s what to focus on: Step-by-Step Execution, Assertions and Validations,
+
+00:02:54.022 --> 00:02:57.582
+Screenshots &amp; Logs and Execution Time &amp; Performance.
+
+00:03:00.069 --> 00:03:02.077
+By intentionally triggering a failure,
+
+00:03:02.237 --> 00:03:07.077
+we can thoroughly test how our framework captures errors and integrates screenshot reporting.
+
+00:03:08.085 --> 00:03:10.581
+Since we've opted for the "On Failure" setting,
+
+00:03:10.677 --> 00:03:13.949
+the screenshot will be generated only when the test case fails
+
+00:03:14.149 --> 00:03:15.813
+making debugging more efficient.
+
+00:03:17.035 --> 00:03:22.899
+Viewing execution status in graph format provides a clear visual representation of test case results,
+
+00:03:23.027 --> 00:03:24.947
+making analysis more intuitive.
+
+00:03:25.561 --> 00:03:29.241
+So friends, this was my execution approach along with the report.
+
+00:03:29.969 --> 00:03:30.945
+Thanks for watching!
+
